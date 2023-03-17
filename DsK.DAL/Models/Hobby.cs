@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DsK.DataService.Models
+namespace DsK.DAL.Models
 {
     public class Hobby
     {
