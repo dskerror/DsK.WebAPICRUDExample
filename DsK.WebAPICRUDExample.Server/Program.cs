@@ -1,18 +1,17 @@
-using DsK.DataService;
+using DsK.Application.Extensions;
+using DsK.DAL.Extensions;
+using DsK.DAL.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<RepositoryService>();
+builder.Services.AddDbContext<DsKDbContext>();
+builder.Services.AddApplicationLayer();
+builder.Services.AddRepositories();
+builder.Services.AddInfrastructureMappings();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

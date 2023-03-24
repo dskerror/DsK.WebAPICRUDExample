@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DsK.DAL.Models
+namespace DsK.Application.Features.Brands.Queries.GetById
 {
-    public class Hobby
+    public class GetBrandByIdResponse
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
     }
 }

@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DsK.Domain.Models
+namespace DsK.Application.Interfaces.Repositories
 {
-    public class Hobby
+    public class IBrandRepository
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
     }
 }
